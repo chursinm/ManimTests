@@ -1,8 +1,7 @@
-FROM manimcommunity/manim:v0.18.0
+FROM manimcommunity/manim:v0.18.1
 
 USER root
-RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir notebook matplotlib
+RUN pip install notebook matplotlib
 
 ARG NB_USER=manimuser
 USER ${NB_USER}
